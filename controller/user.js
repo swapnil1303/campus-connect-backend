@@ -6,7 +6,7 @@ export const signup = async (req, res) => {
   try {
     const { name, department, username, email, password } = req.body;
 
-    let user = await User.findOne({ username,department,email });
+    let user = await User.findOne({ username });
 
     if (user)
       return res.status(201).json({

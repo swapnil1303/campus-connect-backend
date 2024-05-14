@@ -13,7 +13,7 @@ export const signup = async (req, res) => {
         success: false,
         message: "User Already exists.",
       });
-
+     console.log(user);
     const hashedPassword = await bcrypt.hash(password, 10);
 
     user = await User.create({

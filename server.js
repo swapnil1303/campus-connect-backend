@@ -14,7 +14,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 app.use(cors({
-  origin: ['http://localhost:3000','https://campus-connect-frontend-6tk4.onrender.com']
+  origin: ['http://localhost:3000','https://campus-connect-frontend-mdur.onrender.com']
 }));
 
 // Using routes

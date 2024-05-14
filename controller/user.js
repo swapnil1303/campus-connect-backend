@@ -13,6 +13,13 @@ export const signup = async (req, res) => {
         success: false,
         message: "User Already exists.",
       });
+    user = await User.findOne({ email });
+
+    if (user)
+      return res.status(201).json({
+        success: false,
+        message: "Entered email already in use!!.",
+      });
      console.log(user);
     const hashedPassword = await bcrypt.hash(password, 10);
 
